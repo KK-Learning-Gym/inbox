@@ -1,0 +1,47 @@
+[
+	{
+		"id": 1,
+		"from": "Jenny Oswald",
+		"to": "Tom Ivanov",
+		"subject": "Moodboard Update",
+		"body": "",
+		"attachments": "",
+		"timestamp": ""
+	},
+	{
+		"id": 2,
+		"from": "Sarah Townsend",
+		"to": "Tom Ivanov",
+		"subject": "Freelance Opportunity",
+		"body": "",
+		"attachments": "",
+		"timestamp": ""
+	},
+	{
+		"id": 3,
+		"from": "Bryan Edwards",
+		"to": "Tom Ivanov",
+		"subject": "Need a Designer",
+		"body": "",
+		"attachments": "",
+		"timestamp": ""
+    },
+    {
+		"id": 4,
+		"from": "Ida Holland",
+		"to": "Tom Ivanov",
+		"subject": "Ronald is back!",
+		"body": "",
+		"attachments": "",
+		"timestamp": ""
+    },
+    {
+		"id": 4,
+		"from": "Sally Robbins",
+		"to": "Tom Ivanov",
+		"subject": "One more thing",
+		"body": "",
+		"attachments": "",
+		"timestamp": ""
+	}
+]
