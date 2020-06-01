@@ -19,7 +19,7 @@ import { IconContext } from 'react-icons'
 
 const MailCol = ({ mails }) => {
 	return (
-		<div className="flex flex-col my-4 space-y-2">
+		<div className="flex flex-col mt-4 space-y-2 scroll-y scroll-hide">
 			{mails.map(mail => (
 				<MailWidget mail={mail} key={mail.id} />
 			))}
@@ -29,7 +29,7 @@ const MailCol = ({ mails }) => {
 
 const Mails = ({ mails }) => {
 	return (
-		<section className="flex flex-col p-8 bg-gray-200 w-2/6 thin">
+		<section className="flex flex-col px-8 pt-8 bg-gray-200 w-2/6 thin vh-100">
 			<Search />
 			<MailCol mails={mails} />
 		</section>
