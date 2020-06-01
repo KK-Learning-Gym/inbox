@@ -1,14 +1,14 @@
 import React from 'react'
-import { BsSearch } from 'react-icons/bs'
 
 const Search = () => {
 	return (
-		<div className="flex flex-row justify-between items-center p-2 rounded-md bg-gray-300 text-sm text-gray-600">
-			<div>Search</div>
-			<div>
-				<BsSearch />
-			</div>
-		</div>
+		<form>
+			<input
+				class="w-full bg-gray-300 rounded-lg py-2 px-4 block appearance-none"
+				type="text"
+				placeholder="Search"
+			/>
+		</form>
 	)
 }
 

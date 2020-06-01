@@ -5,7 +5,7 @@
 		"to": "Tom Ivanov",
 		"subject": "Moodboard Update",
 		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
-		"attachments": "",
+		"attachments": [],
 		"timestamp": ""
 	},
 	{
@@ -14,7 +14,7 @@
 		"to": "Tom Ivanov",
 		"subject": "Freelance Opportunity",
 		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
-		"attachments": "",
+		"attachments": [],
 		"timestamp": ""
 	},
 	{
@@ -23,25 +23,25 @@
 		"to": "Tom Ivanov",
 		"subject": "Need a Designer",
 		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
-		"attachments": "",
+		"attachments": [],
 		"timestamp": ""
-    },
-    {
+	},
+	{
 		"id": 4,
 		"from": "Ida Holland",
 		"to": "Tom Ivanov",
 		"subject": "Ronald is back!",
 		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
-		"attachments": "",
+		"attachments": [],
 		"timestamp": ""
-    },
-    {
+	},
+	{
 		"id": 4,
 		"from": "Sally Robbins",
 		"to": "Tom Ivanov",
 		"subject": "One more thing",
 		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
-		"attachments": "",
+		"attachments": [],
 		"timestamp": ""
 	}
 ]

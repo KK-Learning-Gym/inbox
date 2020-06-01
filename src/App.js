@@ -8,9 +8,18 @@ import Compose from './components/Compose'
 import Categories from './components/Categories'
 import Labels from './components/Labels'
 
+import {
+	BsChevronLeft,
+	BsChevronRight,
+	BsTrash2,
+	BsHeart,
+	BsFolder,
+} from 'react-icons/bs'
+import { IconContext } from 'react-icons'
+
 const MailCol = ({ mails }) => {
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col my-4 space-y-2">
 			{mails.map(mail => (
 				<MailWidget mail={mail} key={mail.id} />
 			))}
@@ -20,7 +29,7 @@ const MailCol = ({ mails }) => {
 
 const Mails = ({ mails }) => {
 	return (
-		<section className="flex flex-col p-8 bg-gray-200 w-3/6 thin">
+		<section className="flex flex-col p-8 bg-gray-200 w-2/6 thin">
 			<Search />
 			<MailCol mails={mails} />
 		</section>
@@ -29,7 +38,7 @@ const Mails = ({ mails }) => {
 
 const Sidebar = () => {
 	return (
-		<div className="flex flex-col w-1/6 p-4 regular text-sm">
+		<div className="flex flex-col w-1/6 p-4 regular">
 			<Compose />
 			<div className="my-4 divide-y-2">
 				<Categories />
@@ -39,11 +48,68 @@ const Sidebar = () => {
 	)
 }
 
+const Menu = () => {
+	return (
+		<div className="flex justify-between my-4 text-gray-600">
+			<IconContext.Provider value={{ size: '1.3em' }}>
+				<div className="flex space-x-4">
+					<button type="button">
+						<BsHeart />
+					</button>
+					<button type="button">
+						<BsFolder />
+					</button>
+					<button type="button">
+						<BsTrash2 />
+					</button>
+				</div>
+				<div className="flex justify-between">
+					<button type="button">
+						<BsChevronLeft />
+					</button>
+					<button type="button">
+						<BsChevronRight />
+					</button>
+				</div>
+			</IconContext.Provider>
+		</div>
+	)
+}
+
+const Content = ({ message }) => {
+	return (
+		<div>
+			<div className="flex justify-between py-6">
+				<div>
+					<span className="bold">{message.from}</span>
+					<span className="text-gray-600"> to </span>
+					<span className="bold">{message.to}</span>
+				</div>
+				<div className="text-gray-600">Just now</div>
+			</div>
+			<div className="space-y-4">
+				<div className="text-3xl thin">{message.subject}</div>
+				<div className="text-gray-800">{message.body}</div>
+			</div>
+		</div>
+	)
+}
+
+const View = ({ mail }) => {
+	return (
+		<div className="w-3/6 divide-y-2 py-4 px-6">
+			<Menu />
+			<Content message={mail} />
+		</div>
+	)
+}
+
 const App = () => {
 	return (
-		<div className="flex flex-row text-base">
+		<div className="flex text-sm">
 			<Sidebar />
 			<Mails mails={data} />
+			<View mail={data[0]} />
 		</div>
 	)
 }
