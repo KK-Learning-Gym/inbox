@@ -4,7 +4,7 @@ const Search = () => {
 	return (
 		<form>
 			<input
-				class="w-full bg-gray-300 rounded-lg py-2 px-4 block appearance-none"
+				className="w-full bg-gray-300 rounded-lg py-2 px-4 block appearance-none"
 				type="text"
 				placeholder="Search"
 			/>
