@@ -1,16 +1,24 @@
 import React from 'react'
-
-import { BsInboxes, BsHeart, BsTrash2, BsFileEarmark } from 'react-icons/bs'
-
-import { FiSend } from 'react-icons/fi'
+import { useDispatch } from 'react-redux'
 import { IconContext } from 'react-icons'
 
+import { setCategory } from '../reducers/mailReducer'
+
+import { BsInboxes, BsHeart, BsTrash2, BsFileEarmark } from 'react-icons/bs'
+import { FiSend } from 'react-icons/fi'
+
 const Category = props => {
+	const dispatch = useDispatch()
+	const toUpper = text => String.prototype.toUpperCase.call(text)
 	return (
 		<li className="my-4">
-			<button type="button" className="flex justify-start items-center w-full">
+			<button
+				type="button"
+				className="flex justify-start items-center w-full"
+				onClick={() => dispatch(setCategory(toUpper(props.label)))}
+			>
 				{props.children}
-				{props.text}
+				{props.label}
 			</button>
 		</li>
 	)
@@ -18,22 +26,22 @@ const Category = props => {
 
 const Categories = () => {
 	return (
-		<div className="my-8">
+		<div className="mx-4">
 			<ul className="list-none">
 				<IconContext.Provider value={{ size: '1.3em' }}>
-					<Category text="Inbox">
+					<Category label="Inbox">
 						<BsInboxes className="mr-2" />
 					</Category>
-					<Category text="Important">
+					<Category label="Important">
 						<BsHeart className="mr-2" />
 					</Category>
-					<Category text="Drafts">
+					<Category label="Drafts">
 						<BsFileEarmark className="mr-2" />
 					</Category>
-					<Category text="Sent">
+					<Category label="Sent">
 						<FiSend className="mr-2" />
 					</Category>
-					<Category text="Trash">
+					<Category label="Trash">
 						<BsTrash2 className="mr-2" />
 					</Category>
 				</IconContext.Provider>

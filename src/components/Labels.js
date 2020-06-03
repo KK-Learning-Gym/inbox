@@ -8,7 +8,7 @@ const Labels = () => {
 		<>
 			<ul>
 				{labels.map(label => (
-					<li className="my-4" key={label}>
+					<li className="m-4" key={label}>
 						<button type="button" className="flex justify-start items-center">
 							<BsCircle className="mr-3" />
 							{label}

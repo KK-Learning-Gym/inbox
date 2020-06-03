@@ -4,89 +4,89 @@
 		"from": "Jenny Oswald",
 		"to": "Tom Ivanov",
 		"subject": "Moodboard Update",
-		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
+		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn good.",
 		"attachments": [],
 		"timestamp": "",
-		"important": true
+		"attributes": ["IMP"]
 	},
 	{
 		"id": 2,
 		"from": "Sarah Townsend",
 		"to": "Tom Ivanov",
 		"subject": "Freelance Opportunity",
-		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
+		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn good.",
 		"attachments": [],
 		"timestamp": "",
-		"important": false
+		"attributes": ["DEL"]
 	},
 	{
 		"id": 3,
 		"from": "Bryan Edwards",
 		"to": "Tom Ivanov",
 		"subject": "Need a Designer",
-		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
+		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn good.",
 		"attachments": [],
 		"timestamp": "",
-		"important": true
+		"attributes": ["IMP"]
 	},
 	{
 		"id": 4,
 		"from": "Ida Holland",
 		"to": "Tom Ivanov",
 		"subject": "Ronald is back!",
-		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
+		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn good.",
 		"attachments": [],
 		"timestamp": "",
-		"important": false
+		"attributes": []
 	},
 	{
 		"id": 5,
-		"from": "Sally Robbins",
-		"to": "Tom Ivanov",
+		"from": "Tom Ivanov",
+		"to": "Sally Robbins",
 		"subject": "One more thing",
-		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
+		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn good.",
 		"attachments": [],
 		"timestamp": "",
-		"important": false
+		"attributes": []
 	},
 	{
 		"id": 6,
 		"from": "Sally Robbins",
 		"to": "Tom Ivanov",
 		"subject": "One more thing",
-		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
+		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn good.",
 		"attachments": [],
 		"timestamp": "",
-		"important": false
+		"attributes": []
 	},
 	{
 		"id": 7,
 		"from": "Sally Robbins",
 		"to": "Tom Ivanov",
 		"subject": "One more thing",
-		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
+		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn good.",
 		"attachments": [],
 		"timestamp": "",
-		"important": false
+		"attributes": []
 	},
 	{
 		"id": 8,
 		"from": "Sally Robbins",
 		"to": "Tom Ivanov",
 		"subject": "One more thing",
-		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
+		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn good.",
 		"attachments": [],
 		"timestamp": "",
-		"important": false
+		"attributes": []
 	},
 	{
 		"id": 9,
 		"from": "Sally Robbins",
 		"to": "Tom Ivanov",
 		"subject": "One more thing",
-		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn...",
+		"body": "Hi Den! I've been thinking about one thing. Do you realise that it's so damn good.",
 		"attachments": [],
 		"timestamp": "",
-		"important": false
+		"attributes": []
 	}
 ]

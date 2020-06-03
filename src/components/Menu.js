@@ -28,7 +28,7 @@ const Menu = () => {
 		dispatch(setImportant(current))
 	}
 	return (
-		<div className="flex justify-between my-4 text-gray-600">
+		<div className="flex justify-between my-4 text-gray-600 my-4 mx-6">
 			<IconContext.Provider value={{ size: '1.3em' }}>
 				<div className="flex space-x-4">
 					<button type="button">

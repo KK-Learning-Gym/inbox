@@ -12,20 +12,58 @@ import Labels from './components/Labels'
 import Menu from './components/Menu'
 import Content from './components/Content'
 
+import { BsList } from 'react-icons/bs'
+import { IconContext } from 'react-icons'
+
 const MailCol = () => {
-	const mails = useSelector(state => state.mails)
-	return (
-		<div className="flex flex-col mt-4 space-y-2 scroll-y scroll-hide border">
+	const checkFilter = (mail, filter) => {
+		const meta = mail.attributes
+		switch (filter) {
+			case 'TRASH':
+				return meta.includes('DEL')
+			case 'SENT':
+				return mail.from === 'Tom Ivanov' && !meta.includes('DEL')
+			case 'IMPORTANT':
+				return meta.includes('IMP') && !meta.includes('DEL')
+			case 'INBOX':
+			default:
+				return mail.to === 'Tom Ivanov' && !meta.includes('DEL')
+		}
+	}
+	const filter = useSelector(state => state.filter)
+	const mails = useSelector(state => state.mails).filter(mail =>
+		checkFilter(mail, filter)
+	)
+
+	return mails.length > 0 ? (
+		<div className="flex flex-col mt-4 space-y-2 scroll-y scroll-hide">
 			{mails.map(mail => (
 				<MailWidget mail={mail} key={mail.id} />
 			))}
+		</div>
+	) : (
+		<div className="m-auto">
+			<div className="lds-ripple">
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	)
+}
+
+const Hamburger = () => {
+	return (
+		<div className="absolute mt-2 ml-1">
+			<IconContext.Provider value={{ size: '1.5rem', color: '#4A5568' }}>
+				<BsList />
+			</IconContext.Provider>
 		</div>
 	)
 }
 
 const Mails = () => {
 	return (
-		<section className="flex flex-col px-8 pt-8 bg-gray-200 w-2/6 thin vh-100">
+		<section className="w-2/6 flex flex-col px-8 pt-8 bg-gray-200 thin vh-100">
 			<Search />
 			<MailCol />
 		</section>
@@ -34,9 +72,9 @@ const Mails = () => {
 
 const Sidebar = () => {
 	return (
-		<div className="flex flex-col w-1/6 p-4 regular">
+		<div className="w-1/6 flex flex-col regular">
 			<Compose />
-			<div className="my-4 divide-y-2">
+			<div className="divide-y-2">
 				<Categories />
 				<Labels />
 			</div>
@@ -48,7 +86,7 @@ const View = () => {
 	const key = useSelector(state => state.currentMail)
 	const mail = data.find(mail => mail.id === key)
 	return (
-		<div className="w-3/6 divide-y-2 py-4 px-6">
+		<div className="w-3/6 divide-y-2">
 			<Menu />
 			<Content message={mail} />
 		</div>
@@ -58,16 +96,19 @@ const View = () => {
 const App = () => {
 	const dispatch = useDispatch()
 	const hook = () => {
-		dispatch(setMails(data))
+		// Remove when fetching
+		setTimeout(() => dispatch(setMails(data)), 2000)
 	}
 
 	useEffect(hook, [])
 	return (
-		<div className="flex text-sm">
-			<Sidebar />
-			<Mails />
-			<View />
-		</div>
+		<>
+			<div className="flex text-sm">
+				<Sidebar />
+				<Mails />
+				<View />
+			</div>
+		</>
 	)
 }
 
